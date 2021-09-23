@@ -1,4 +1,4 @@
-import { TAB_HEART, TAB_LIST, TAB_MAP } from '../constants';
+import { TAB_HEART, TAB_LIST, TAB_MAP } from '../utils';
 import PropTypes from 'prop-types';
 import './index.scss';
 

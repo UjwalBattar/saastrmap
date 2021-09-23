@@ -22,10 +22,10 @@ const FoodList = (props) => {
                 <li className={`${getOptionClass(OPTION_DRINKS)} p-1 foodType`} onClick={() => setCurrentOption(OPTION_DRINKS)}>{OPTION_DRINKS}</li>
             </ul>
             <div className='foodOptionContainer flex flex-col'>
-                { foodOptions && foodOptions.map((foodOption) => {
+                { foodOptions && foodOptions.map((foodOption, idx) => {
                     const { name, location, cuisine, description } = foodOption;
                     return (
-                        <div className='py-4'>
+                        <div className='py-4' key={name+idx}>
                             <img className='h-20 w-20 rounded float-left mr-4' src='https://images.unsplash.com/photo-1632370339733-759652742546?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNjI3Mzd8MHwxfHRvcGljfHx4alBSNGhsa0JHQXx8fHx8Mnx8MTYzMjQyNzI0MA&ixlib=rb-1.2.1&q=80&w=200'/>
                             <h3>{name}</h3>
                             <p className='text-gray-600 text-xs'>{location}</p>

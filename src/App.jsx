@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TAB_LIST, TAB_MAP } from './constants';
+import { TAB_LIST, TAB_MAP } from './utils';
 import FoodList from './FoodList';
 import FoodMap from './FoodMap';
 import Footer from './Footer';

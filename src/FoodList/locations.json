@@ -1,26 +1,34 @@
 {
     "Lunch": [{
-        "name": "Test Lunch Restaurant",
+        "name": "Test Lunch Restaurant 1",
         "location": "555 Fake Ave, San Francisco CA 12345",
         "cuisine": "American",
+        "lat": 40.774632,
+        "lng": -73.946838,
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         "rating": 4
     }, {
-        "name": "Test Lunch Restaurant",
+        "name": "Test Lunch Restaurant 2",
         "location": "555 Fake Ave, San Francisco CA 12345",
         "cuisine": "American",
+        "lat": 40.774632,
+        "lng": -73.95,
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         "rating": 4
     }, {
-        "name": "Test Lunch Restaurant",
+        "name": "Test Lunch Restaurant 3",
         "location": "555 Fake Ave, San Francisco CA 12345",
         "cuisine": "American",
+        "lat": 40.774632,
+        "lng": -73.96,
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         "rating": 4
     }, {
-        "name": "Test Lunch Restaurant",
+        "name": "Test Lunch Restaurant 4",
         "location": "555 Fake Ave, San Francisco CA 12345",
         "cuisine": "American",
+        "lat": 40.774632,
+        "lng": -73.93,
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         "rating": 4
     }],
