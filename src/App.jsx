@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import './App.css';
 import { getComponentForTab, TAB_LIST, TAB_MAP } from './constants';
 import Footer from './Footer';
 
 const App = (props) => {
-  const [currentTab, setCurrentTab] = useState(TAB_MAP);
+  const [currentTab, setCurrentTab] = useState(TAB_LIST);
   const CurrentComponent = getComponentForTab(currentTab);
 
   const changeTabs = (tab) => {

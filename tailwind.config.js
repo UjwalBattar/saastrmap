@@ -6,6 +6,9 @@ module.exports = {
       '4/5': '80%',
     },
     extend: {
+      maxHeight: {
+        '92vh': '92vh',
+      },
       height: {
         '92vh': '92vh',
       },
