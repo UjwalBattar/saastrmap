@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { TAB_LIST, TAB_MAP } from './utils';
+import { TAB_HEART, TAB_LIST, TAB_MAP } from './utils';
 import FoodList from './FoodList';
 import FoodMap from './FoodMap';
 import Footer from './Footer';
+import Heart from './Heart';
 
 const App = (props) => {
   const [currentTab, setCurrentTab] = useState(TAB_LIST);
@@ -21,6 +22,7 @@ const App = (props) => {
     <div className="App">
       <FoodMap shouldShow={currentTab === TAB_MAP} selectedResturantId={selectedRestaurant}/>
       <FoodList shouldShow={currentTab === TAB_LIST} onRestaurantClick={onRestaurantClick}/>
+      <Heart shouldShow={currentTab === TAB_HEART} />
       <Footer onClick={changeTabs} currentTab={currentTab}/>
     </div>
   );
