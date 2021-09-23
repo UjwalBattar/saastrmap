@@ -23,19 +23,19 @@ const FoodList = (props) => {
     const foodOptions = foodLocations[currentOption];
 
     return (
-        <div className={`px-4 max-h-92vh overflow-y-scroll ${ !shouldShow && 'hidden'}`}>
+        <div className={`max-h-92vh overflow-y-scroll ${ !shouldShow && 'hidden'}`}>
             <RecappedBanner />
-            <ul className='w-full bg-white pt-4 flex justify-between sticky top-0'>
+            <ul className='w-full bg-white px-4 pt-4 flex justify-between sticky top-0'>
                 <li className={`${getOptionClass(OPTION_LUNCH)} p-1 foodType`} onClick={() => setCurrentOption(OPTION_LUNCH)}>{OPTION_LUNCH}</li>
                 <li className={`${getOptionClass(OPTION_DINNER)} p-1 foodType`} onClick={() => setCurrentOption(OPTION_DINNER)}>{OPTION_DINNER}</li>
                 <li className={`${getOptionClass(OPTION_DRINKS)} p-1 foodType`} onClick={() => setCurrentOption(OPTION_DRINKS)}>{OPTION_DRINKS}</li>
             </ul>
-            <div className='foodOptionContainer flex flex-col'>
+            <div className='foodOptionContainer flex flex-col px-4'>
                 { foodOptions && foodOptions.map((foodOption, idx) => {
                     const { name, location, cuisine, description, id } = foodOption;
                     return (
                         <div className='py-4' key={name+idx} onClick={() => onRestaurantClick(id)}>
-                            <img alt={name} className='h-20 w-20 rounded float-left mr-4' src='https://images.unsplash.com/photo-1632370339733-759652742546?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNjI3Mzd8MHwxfHRvcGljfHx4alBSNGhsa0JHQXx8fHx8Mnx8MTYzMjQyNzI0MA&ixlib=rb-1.2.1&q=80&w=200'/>
+                            <img alt={name} className='h-20 w-20 rounded shadow-lg float-left mr-4' src='https://images.unsplash.com/photo-1632370339733-759652742546?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNjI3Mzd8MHwxfHRvcGljfHx4alBSNGhsa0JHQXx8fHx8Mnx8MTYzMjQyNzI0MA&ixlib=rb-1.2.1&q=80&w=200'/>
                             <h3>{name}</h3>
                             <p className='text-gray-600 text-xs'>{location}</p>
                             <p className='text-gray-600 text-xs'>{cuisine}</p>
