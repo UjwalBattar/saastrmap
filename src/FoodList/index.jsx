@@ -1,5 +1,6 @@
 import './index.scss';
 import { useState } from "react";
+import PropTypes from "prop-types";
 import foodLocations from './locations.json';
 
 const OPTION_LUNCH = 'Lunch';
@@ -7,13 +8,14 @@ const OPTION_DRINKS = 'Drinks';
 const OPTION_DINNER = 'Dinner';
 
 const FoodList = (props) => {
+    const { shouldShow } = props;
     const [currentOption, setCurrentOption] = useState(OPTION_LUNCH);
     const isCurrentOption = (optionName) => optionName === currentOption;
     const getOptionClass = (optionName) => isCurrentOption(optionName) && 'border-b-2 border-gray-500';
     const foodOptions = foodLocations[currentOption];
 
     return (
-        <div className='p-4 max-h-92vh overflow-y-scroll'>
+        <div className={`p-4 max-h-92vh overflow-y-scroll ${ !shouldShow && 'hidden'}`}>
             <ul className='w-full flex justify-between'>
                 <li className={`${getOptionClass(OPTION_LUNCH)} p-1 foodType`} onClick={() => setCurrentOption(OPTION_LUNCH)}>{OPTION_LUNCH}</li>
                 <li className={`${getOptionClass(OPTION_DINNER)} p-1 foodType`} onClick={() => setCurrentOption(OPTION_DINNER)}>{OPTION_DINNER}</li>
@@ -36,5 +38,9 @@ const FoodList = (props) => {
         </div>
     );
 }
+
+FoodList.propTypes = {
+    shouldShow: PropTypes.bool.isRequired,
+};
 
 export default FoodList;
