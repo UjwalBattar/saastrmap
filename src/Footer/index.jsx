@@ -5,7 +5,7 @@ import './index.scss';
 const FooterTab = (props) => {
     const { className, onClick, tab } = props;
     return (
-        <a className={className} onClick={() => onClick(tab)}></a>
+        <span className={className} onClick={() => onClick(tab)}></span>
     )
 }
 

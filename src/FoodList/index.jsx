@@ -26,7 +26,7 @@ const FoodList = (props) => {
                     const { name, location, cuisine, description, id } = foodOption;
                     return (
                         <div className='py-4' key={name+idx} onClick={() => onRestaurantClick(id)}>
-                            <img className='h-20 w-20 rounded float-left mr-4' src='https://images.unsplash.com/photo-1632370339733-759652742546?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNjI3Mzd8MHwxfHRvcGljfHx4alBSNGhsa0JHQXx8fHx8Mnx8MTYzMjQyNzI0MA&ixlib=rb-1.2.1&q=80&w=200'/>
+                            <img alt={name} className='h-20 w-20 rounded float-left mr-4' src='https://images.unsplash.com/photo-1632370339733-759652742546?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNjI3Mzd8MHwxfHRvcGljfHx4alBSNGhsa0JHQXx8fHx8Mnx8MTYzMjQyNzI0MA&ixlib=rb-1.2.1&q=80&w=200'/>
                             <h3>{name}</h3>
                             <p className='text-gray-600 text-xs'>{location}</p>
                             <p className='text-gray-600 text-xs'>{cuisine}</p>

@@ -1,7 +1,6 @@
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
 import PropTypes from 'prop-types';
 import { useEffect, useMemo, useState } from 'react';
-import locations from '../FoodList/locations.json';
 import { getAllRestaurants } from '../utils';
 
 const FoodMap = (props) => {
@@ -15,13 +14,17 @@ const FoodMap = (props) => {
 
     const [currentRestaurant, setCurrentRestaurant] = useState(null);
     const [showInfoWindow, setShowInfoWindow] = useState(false);
+    const [restaurants, setRestaurants] = useState(null);
 
     const onMarkerClick = (markerProps, marker, e) => {
         setCurrentRestaurant(markerProps.restaurant);
         setShowInfoWindow(true);
     }
 
-    const restaurants = getAllRestaurants();
+    useEffect(() => {
+        setRestaurants(getAllRestaurants());
+    }, []);
+
     const markers = useMemo(() => {
         return restaurants && restaurants.map(restaurant => {
             const {lat, lng, name, id} = restaurant;
@@ -35,7 +38,7 @@ const FoodMap = (props) => {
                 />
             );
          })
-    }, []);
+    }, [restaurants]);
 
     useEffect(() => {
         if (!selectedResturantId) {
@@ -44,7 +47,7 @@ const FoodMap = (props) => {
         setShowInfoWindow(true);
         const selectedRestaurant = restaurants.find(restaurant => restaurant.id === selectedResturantId);
         setCurrentRestaurant(selectedRestaurant);
-    }, [selectedResturantId]);
+    }, [selectedResturantId, restaurants]);
 
     const windowPosition = currentRestaurant ? {lng: currentRestaurant.lng, lat: currentRestaurant.lat + 0.003} : null; // give it some padding on the top
 
