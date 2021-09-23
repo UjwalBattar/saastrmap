@@ -19,7 +19,7 @@ const App = (props) => {
   }
 
   return (
-    <div className="App">
+    <div className="App bg-white">
       <FoodMap shouldShow={currentTab === TAB_MAP} selectedResturantId={selectedRestaurant}/>
       <FoodList shouldShow={currentTab === TAB_LIST} onRestaurantClick={onRestaurantClick}/>
       <Heart shouldShow={currentTab === TAB_HEART} />

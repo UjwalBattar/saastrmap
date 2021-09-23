@@ -7,6 +7,14 @@ const OPTION_LUNCH = 'Lunch';
 const OPTION_DRINKS = 'Drinks';
 const OPTION_DINNER = 'Dinner';
 
+const RecappedBanner = (props) => {
+    return (
+        <div className='px-20 py-4'>
+            <img alt='SaaStrmap curated by Recapped' src={process.env.PUBLIC_URL + '/SaaStr-Map-by-Recapped-1.png'} />
+        </div>
+    )
+}
+
 const FoodList = (props) => {
     const { shouldShow, onRestaurantClick } = props;
     const [currentOption, setCurrentOption] = useState(OPTION_LUNCH);
@@ -15,8 +23,9 @@ const FoodList = (props) => {
     const foodOptions = foodLocations[currentOption];
 
     return (
-        <div className={`p-4 max-h-92vh overflow-y-scroll ${ !shouldShow && 'hidden'}`}>
-            <ul className='w-full flex justify-between'>
+        <div className={`px-4 max-h-92vh overflow-y-scroll ${ !shouldShow && 'hidden'}`}>
+            <RecappedBanner />
+            <ul className='w-full bg-white pt-4 flex justify-between sticky top-0'>
                 <li className={`${getOptionClass(OPTION_LUNCH)} p-1 foodType`} onClick={() => setCurrentOption(OPTION_LUNCH)}>{OPTION_LUNCH}</li>
                 <li className={`${getOptionClass(OPTION_DINNER)} p-1 foodType`} onClick={() => setCurrentOption(OPTION_DINNER)}>{OPTION_DINNER}</li>
                 <li className={`${getOptionClass(OPTION_DRINKS)} p-1 foodType`} onClick={() => setCurrentOption(OPTION_DRINKS)}>{OPTION_DRINKS}</li>
