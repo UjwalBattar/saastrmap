@@ -1,8 +1,11 @@
+require('dotenv').config();
+/* eslint-disable */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+/* eslint-enable */
 
 ReactDOM.render(
   <React.StrictMode>
