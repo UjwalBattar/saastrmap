@@ -2,6 +2,7 @@ import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
 import PropTypes from 'prop-types';
 import { useEffect, useMemo, useState } from 'react';
 import { getAllRestaurants } from '../utils';
+import mapStyle from './mapStyle.json';
 
 const FoodMap = (props) => {
     const { shouldShow, selectedResturantId } = props;
@@ -49,6 +50,12 @@ const FoodMap = (props) => {
         setCurrentRestaurant(selectedRestaurant);
     }, [selectedResturantId, restaurants]);
 
+    const mapLoaded = (mapProps, map) => {
+        map.setOptions({
+            styles: mapStyle
+        });
+    }
+
     const windowPosition = currentRestaurant ? {lng: currentRestaurant.lng, lat: currentRestaurant.lat + 0.003} : null; // give it some padding on the top
 
     return (
@@ -57,6 +64,7 @@ const FoodMap = (props) => {
                 style={style}
                 google={props.google}
                 initialCenter={coords}
+                onReady={(mapProps, map) => mapLoaded(mapProps, map)}
             >
                 { markers }
                 <InfoWindow

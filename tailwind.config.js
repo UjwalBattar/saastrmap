@@ -9,6 +9,9 @@ module.exports = {
       maxHeight: {
         '92vh': '92vh',
       },
+      maxWidth: {
+        '180': '180px',
+      },
       height: {
         '92vh': '92vh',
       },
