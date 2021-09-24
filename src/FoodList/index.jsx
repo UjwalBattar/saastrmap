@@ -8,11 +8,12 @@ const OPTION_LUNCH = 'Lunch';
 const OPTION_DRINKS = 'Drinks';
 const OPTION_DINNER = 'Dinner';
 
-const getTagColor = () => {
-    const colors = ['blue', 'purple', 'pink', 'indigo', 'green', 'yellow'];
-    let idx = Math.floor(Math.random() * colors.length);
-    return colors[idx%colors.length];
-} 
+const getTagColorClass = () => {
+    // NOTE: need to spell these class names out so they don't get tree-shaken in prod https://tailwindcss.com/docs/optimizing-for-production
+    const colorClasses = ['text-blue-600 bg-blue-100', 'text-purple-600 bg-purple-100', 'text-indigo-600 bg-indigo-100', 'text-green-600 bg-green-100', 'text-yellow-600 bg-yellow-100'];
+    let idx = Math.floor(Math.random() * colorClasses.length);
+    return colorClasses[idx%colorClasses.length];
+}
 
 const FoodList = (props) => {
     const { shouldShow, onRestaurantClick } = props;
@@ -32,10 +33,9 @@ const FoodList = (props) => {
                     <p className='text-gray-600 text-xs'>{address}</p>
                     <div className='flex justify-between'>
                         <div className='flex flex-wrap'>
-                            { tags.split(',').map((tag, i) => {
-                                const color = getTagColor();
+                            { tags.split(',').map(tag => {
                                 return (
-                                    <p className={`inline my-1 mr-2 px-2 py-1  text-${color}-600 bg-${color}-100 rounded-lg text-xs font-semibold`}>{tag}</p>
+                                    <p className={`inline my-1 mr-2 px-2 py-1  ${getTagColorClass()} rounded-lg text-xs font-semibold`}>{tag}</p>
                                 );
                             })}
                         </div>
