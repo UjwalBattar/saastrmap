@@ -9,8 +9,8 @@ const OPTION_DINNER = 'Dinner';
 
 const RecappedBanner = (props) => {
     return (
-        <div className='px-20 py-4 flex justify-center'>
-            <img className='max-w-180' alt='SaaStrmap curated by Recapped' src={process.env.PUBLIC_URL + '/SaaStr-Map-by-Recapped-1.png'} />
+        <div className='px-20 pt-4 flex justify-center'>
+            <img className='max-w-220' alt='SaaStrmap curated by Recapped' src={process.env.PUBLIC_URL + '/SaaStrMap Curated By Recapped 2.png'} />
         </div>
     )
 }
@@ -25,7 +25,7 @@ const FoodList = (props) => {
     return (
         <div className={`max-h-92vh overflow-y-scroll ${ !shouldShow && 'hidden'}`}>
             <RecappedBanner />
-            <ul className='w-full bg-white px-4 pt-4 flex justify-between sticky top-0'>
+            <ul className='w-full bg-blue-50 px-4 pt-4 pb-2 flex justify-between sticky top-0'>
                 <li className={`${getOptionClass(OPTION_LUNCH)} p-1 foodType cursor-pointer`} onClick={() => setCurrentOption(OPTION_LUNCH)}>{OPTION_LUNCH}</li>
                 <li className={`${getOptionClass(OPTION_DINNER)} p-1 foodType cursor-pointer`} onClick={() => setCurrentOption(OPTION_DINNER)}>{OPTION_DINNER}</li>
                 <li className={`${getOptionClass(OPTION_DRINKS)} p-1 foodType cursor-pointer`} onClick={() => setCurrentOption(OPTION_DRINKS)}>{OPTION_DRINKS}</li>
