@@ -32,13 +32,16 @@ const FoodList = (props) => {
             </ul>
             <div className='foodOptionContainer flex flex-col px-4'>
                 { foodOptions && foodOptions.map((foodOption, idx) => {
-                    const { name, location, cuisine, description, id } = foodOption;
+                    const { name, location, cuisine, description, discount, id } = foodOption;
                     return (
                         <div className='py-4' key={name+idx} onClick={() => onRestaurantClick(id)}>
                             <img alt={name} className='h-20 w-20 rounded shadow-lg float-left mr-4' src='https://images.unsplash.com/photo-1632370339733-759652742546?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNjI3Mzd8MHwxfHRvcGljfHx4alBSNGhsa0JHQXx8fHx8Mnx8MTYzMjQyNzI0MA&ixlib=rb-1.2.1&q=80&w=200'/>
-                            <h3>{name}</h3>
+                            <h3 className='text-sm font-semibold'>{name}</h3>
                             <p className='text-gray-600 text-xs'>{location}</p>
-                            <p className='text-gray-600 text-xs'>{cuisine}</p>
+                            <div className='flex justify-between'>
+                                <p className='text-gray-600 text-xs font-semibold'>{cuisine}</p>
+                                {discount ? <p className='text-green-600 text-xs'>{discount}% discount</p> : null}
+                            </div>
                             <p className='text-gray-600 text-xs'>{description}</p>
                         </div>
                     );
