@@ -2,8 +2,9 @@
     "Lunch": [{
         "id": 1,
         "name": "Test Lunch Restaurant 1",
-        "location": "555 Fake Ave, San Francisco CA 12345",
-        "cuisine": "American",
+        "photo": "https://images.unsplash.com/photo-1632370339733-759652742546?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNjI3Mzd8MHwxfHRvcGljfHx4alBSNGhsa0JHQXx8fHx8Mnx8MTYzMjQyNzI0MA&ixlib=rb-1.2.1&q=80&w=200",
+        "address": "555 Fake Ave, San Francisco CA 12345",
+        "tags": "American",
         "lat": 40.774632,
         "lng": -73.946838,
         "discount": 0,
@@ -12,8 +13,9 @@
     }, {
         "id": 2,
         "name": "Test Lunch Restaurant 2",
-        "location": "555 Fake Ave, San Francisco CA 12345",
-        "cuisine": "American",
+        "photo": "https://images.unsplash.com/photo-1632370339733-759652742546?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNjI3Mzd8MHwxfHRvcGljfHx4alBSNGhsa0JHQXx8fHx8Mnx8MTYzMjQyNzI0MA&ixlib=rb-1.2.1&q=80&w=200",
+        "address": "555 Fake Ave, San Francisco CA 12345",
+        "tags": "American",
         "lat": 40.774632,
         "lng": -73.95,
         "discount": 0,
@@ -22,8 +24,9 @@
     }, {
         "id": 3,
         "name": "Test Lunch Restaurant 3",
-        "location": "555 Fake Ave, San Francisco CA 12345",
-        "cuisine": "American",
+        "photo": "https://images.unsplash.com/photo-1632370339733-759652742546?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNjI3Mzd8MHwxfHRvcGljfHx4alBSNGhsa0JHQXx8fHx8Mnx8MTYzMjQyNzI0MA&ixlib=rb-1.2.1&q=80&w=200",
+        "address": "555 Fake Ave, San Francisco CA 12345",
+        "tags": "American",
         "lat": 40.774632,
         "lng": -73.96,
         "discount": 15,
@@ -32,8 +35,9 @@
     }, {
         "id": 4,
         "name": "Test Lunch Restaurant 4",
-        "location": "555 Fake Ave, San Francisco CA 12345",
-        "cuisine": "American",
+        "photo": "https://images.unsplash.com/photo-1632370339733-759652742546?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNjI3Mzd8MHwxfHRvcGljfHx4alBSNGhsa0JHQXx8fHx8Mnx8MTYzMjQyNzI0MA&ixlib=rb-1.2.1&q=80&w=200",
+        "address": "555 Fake Ave, San Francisco CA 12345",
+        "tags": "American",
         "lat": 40.774632,
         "lng": -73.93,
         "discount": 0,
@@ -41,5 +45,30 @@
         "rating": 4
     }],
     "Dinner": [],
-    "Drinks": []
+    "Drinks": [
+        {
+            "id": 111,
+          "name": "The Swingin' Door",
+          "description": "Wednesday night karaoke so you can annoy everyone with your rendition of Fancy Like.",
+          "tags": "Pub",
+          "lat": 37.545010,
+          "lng": -122.304570,
+          "photo": "https://dl.airtable.com/.attachmentThumbnails/e72fc8cc01f587d231a98f8a9c668714/be8ea0b1",
+          "category": "Drinks",
+          "phone": "(650) 522-9800",
+          "address": "106 E. 25th Ave, San Mateo, CA"
+        },
+        {
+            "id": 112,
+          "name": "Mortar & Pestle",
+          "description": "Chic cocktails and Indian food that just slaps. The best combo bar naan.",
+          "tags": "Cocktail Bar, Indian",
+          "lat": 37.567070,
+          "lng": -122.323460,
+          "photo": "https://dl.airtable.com/.attachments/34d48fa530d2be6b895800bcf1909ca6/f9a03706/MortarandPestle.jpeg",
+          "category": "Drinks",
+          "phone": "(650) 316-8648",
+          "address": "130 Main Street, San Mateo, CA"
+        }
+    ]
 }
