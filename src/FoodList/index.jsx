@@ -40,7 +40,7 @@ const FoodList = (props) => {
                             <p className='text-gray-600 text-xs'>{location}</p>
                             <div className='flex justify-between'>
                                 <p className='text-gray-600 text-xs font-semibold'>{cuisine}</p>
-                                {discount ? <p className='text-green-600 text-xs'>{discount}% discount</p> : null}
+                                {discount ? <p className='text-green-600 text-2xs'>{discount}% discount with code "Recapped"</p> : null}
                             </div>
                             <p className='text-gray-600 text-xs'>{description}</p>
                         </div>

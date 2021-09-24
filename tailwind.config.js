@@ -6,6 +6,11 @@ module.exports = {
       '4/5': '80%',
     },
     extend: {
+      fontSize: {
+        '2xs': ['0.65rem', {
+          lineHeight: '1rem',
+        }],
+      },
       maxHeight: {
         '92vh': '92vh',
       },
