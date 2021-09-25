@@ -27,7 +27,7 @@ const FoodList = (props) => {
         const foodOptionsHTML = foodOptions && foodOptions.map((foodOption, idx) => {
             const { name, address, tags, description, discount, id, photo } = foodOption;
             return (
-                <div className='py-4 border-b-2 last:border-b-0' key={name+idx} onClick={() => onRestaurantClick(id)}>
+                <div className='py-4 border-b-2 last:border-b-0 cursor-pointer' key={name+idx} onClick={() => onRestaurantClick(id)}>
                     <img alt={name} className='w-32 max-h-24 rounded shadow-lg float-left object-cover mr-4' src={photo}/>
                     <h3 className='text-sm text-gray-700 font-semibold'>{name}</h3>
                     <p className='text-gray-600 text-xs'>{address}</p>
@@ -55,9 +55,9 @@ const FoodList = (props) => {
     }), [onRestaurantClick]);
 
     return (
-        <div className={`max-h-92vh overflow-y-scroll ${ !shouldShow && 'hidden'}`}>
+        <div className={`max-h-92vh lg:px-64 overflow-y-scroll ${ !shouldShow && 'hidden'}`}>
             <RecappedBanner />
-            <ul className='w-full bg-blue-50 px-8 pt-4 pb-2 flex justify-between sticky top-0'>
+            <ul className='w-full bg-blue-50 px-8 pt-2 pb-1 flex justify-between sticky top-0'>
                 <a href={`#${OPTION_LUNCH}`} className={`${getOptionClass(OPTION_LUNCH)} p-1 foodType cursor-pointer`} onClick={() => setCurrentOption(OPTION_LUNCH)}>{OPTION_LUNCH}</a>
                 <a href={`#${OPTION_DINNER}`} className={`${getOptionClass(OPTION_DINNER)} p-1 foodType cursor-pointer`} onClick={() => setCurrentOption(OPTION_DINNER)}>{OPTION_DINNER}</a>
                 <a href={`#${OPTION_DRINKS}`} className={`${getOptionClass(OPTION_DRINKS)} p-1 foodType cursor-pointer`} onClick={() => setCurrentOption(OPTION_DRINKS)}>{OPTION_DRINKS}</a>

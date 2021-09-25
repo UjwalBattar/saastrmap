@@ -4,7 +4,7 @@ import RecappedBanner from '../RecappedBanner';
 const Heart = (props) => {
     const { shouldShow } = props;
     return (
-        <div className={`p-4 pt-0 h-screen relative ${!shouldShow && 'hidden'}`}>
+        <div className={`p-4 pt-0 lg:px-64 h-screen relative ${!shouldShow && 'hidden'}`}>
             <RecappedBanner />
             <div className='py-4 text-md'>
                 <h4 className='font-medium'>Why you're reading this</h4>
