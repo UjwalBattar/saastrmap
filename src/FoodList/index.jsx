@@ -47,7 +47,7 @@ const FoodList = (props) => {
         });
 
         return (
-            <div>
+            <div className='pb-8'>
                 <h4 id={option} className='pt-4 text-gray-800 text-xl font-medium'>{option}</h4>
                 { foodOptionsHTML }
             </div>
