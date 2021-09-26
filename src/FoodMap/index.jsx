@@ -2,7 +2,7 @@ import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
 import PropTypes from 'prop-types';
 import { createRef, useEffect, useState } from 'react';
 import RestaurantInfo from '../RestaurantInfo';
-import { getAllRestaurants, TYPE_RESTAURANT } from '../utils';
+import { getAllRestaurants, TYPE_FEATURED, TYPE_RESTAURANT } from '../utils';
 import mapStyle from './mapStyle.json';
 
 const FoodMap = (props) => {
@@ -87,7 +87,12 @@ const FoodMap = (props) => {
                     visible={showInfoWindow}
                     onClose={() => setShowInfoWindow(false)}
                 >
-                    {currentRestaurant && <RestaurantInfo {...currentRestaurant} />}
+                    {currentRestaurant && currentRestaurant.type === TYPE_RESTAURANT && <RestaurantInfo {...currentRestaurant} />}
+                    {currentRestaurant && currentRestaurant.type === TYPE_FEATURED && (
+                        <div>
+                            <h3 className='text-sm text-gray-700 font-semibold'>{currentRestaurant.name}</h3>
+                        </div>
+                    )}
                 </InfoWindow>
             </Map>
         </div>
