@@ -30,7 +30,7 @@ const FoodOption = ({name, address, tags, description, discount, id, image, onCl
                     })}
                 </div>
             </div>
-            {discount ? <p className='text-gray-600 text-2xs font-semibold'>{discount}% off with code "Recapped"</p> : null}
+            {discount ? <p className='text-green-500 text-2xs font-semibold'>{discount}% off with code "Recapped"</p> : null}
             <p className='text-gray-600 text-xs'>{description}</p>
         </div>
     );

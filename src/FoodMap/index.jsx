@@ -47,6 +47,7 @@ const FoodMap = (props) => {
             return (
                 <Marker
                     {...markerProps}
+                    ref={createRef()}
                 />
             );
          });
