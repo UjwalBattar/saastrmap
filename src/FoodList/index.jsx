@@ -20,7 +20,7 @@ const FoodOption = ({name, address, tags, description, discount, id, image, lat,
     const uberClick = e => {
         e.preventDefault();
         e.stopPropagation();
-        window.location.href = `https://m.uber.com/ul/?client_id=gfX7c7JqlZL9yj9n1Pa_EJb8TBddthb5&action=setPickup&dropoff[formatted_address]=${safeAddress}&dropoff[latitude]=${lat}&dropoff[longitude]=${lng}`;
+        window.location.href = `https://m.uber.com/ul/?client_id=gfX7c7JqlZL9yj9n1Pa_EJb8TBddthb5&action=setPickup&pickup=my_location&dropoff[formatted_address]=${safeAddress}&dropoff[latitude]=${lat}&dropoff[longitude]=${lng}`;
     }
     return (
         <div className='pt-4 pb-2 border-b-2 last:border-b-0 cursor-pointer' key={name+id} onClick={() => onClick(id)}>
