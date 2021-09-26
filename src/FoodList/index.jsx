@@ -16,8 +16,14 @@ const getTagColorClass = () => {
 }
 
 const FoodOption = ({name, address, tags, description, discount, id, image, onClick}) => {
+    const safeAddress = encodeURIComponent(address);
+    const uberClick = e => {
+        e.preventDefault();
+        e.stopPropagation();
+        window.location.href = `https://m.uber.com/ul/?action=setPickup&dropoff[formatted_address]=${safeAddress}`;
+    }
     return (
-        <div className='py-4 border-b-2 last:border-b-0 cursor-pointer' key={name+id} onClick={() => onClick(id)}>
+        <div className='pt-4 pb-2 border-b-2 last:border-b-0 cursor-pointer' key={name+id} onClick={() => onClick(id)}>
             <img alt={name} className='w-32 max-h-24 rounded shadow-lg float-left object-cover mr-4' src={image}/>
             <h3 className='text-sm text-gray-700 font-semibold'>{name}</h3>
             <p className='text-gray-600 text-xs'>{address}</p>
@@ -32,6 +38,9 @@ const FoodOption = ({name, address, tags, description, discount, id, image, onCl
             </div>
             {discount ? <p className='text-gray-600 text-2xs font-semibold'>{discount}% off with code "Recapped"</p> : null}
             <p className='text-gray-600 text-xs'>{description}</p>
+            <div className='flex justify-center pt-2 px-4'>
+                <button className='text-2xs shadow-md bg-gray-600 text-white rounded px-2 py-1' onClick={uberClick}>Call an Uber</button>
+            </div>
         </div>
     );
 }
