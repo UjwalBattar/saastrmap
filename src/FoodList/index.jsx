@@ -35,7 +35,7 @@ const FoodList = (props) => {
                         <div className='flex flex-wrap'>
                             { tags.split(',').map(tag => {
                                 return (
-                                    <p className={`inline my-1 mr-2 px-2 py-1  ${getTagColorClass()} rounded-lg text-xs font-semibold`}>{tag}</p>
+                                    <p key={idx+tag} className={`inline my-1 mr-2 px-2 py-1  ${getTagColorClass()} rounded-lg text-xs font-semibold`}>{tag}</p>
                                 );
                             })}
                         </div>
@@ -47,7 +47,7 @@ const FoodList = (props) => {
         });
 
         return (
-            <div className='pb-8'>
+            <div className='pb-4' key={option}>
                 <h4 id={option} className='pt-4 text-gray-800 text-xl font-medium'>{option}</h4>
                 { foodOptionsHTML }
             </div>
