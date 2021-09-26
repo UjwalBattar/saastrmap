@@ -25,7 +25,7 @@ const FoodOption = ({name, address, tags, description, discount, id, image, onCl
                 <div className='flex flex-wrap'>
                     { tags.split(',').map(tag => {
                         return (
-                            <p key={id+tag} className={`inline my-1 mr-2 px-2 py-1  ${getTagColorClass()} rounded-lg text-xs font-semibold`}>{tag}</p>
+                            <p key={id+tag} className={`inline my-1 mr-2 px-2 py-1  ${getTagColorClass()} rounded-lg text-2xs font-semibold`}>{tag}</p>
                         );
                     })}
                 </div>
@@ -45,6 +45,14 @@ const FoodList = (props) => {
     const foodOptions = useMemo(() => [OPTION_LUNCH, OPTION_DINNER, OPTION_DRINKS].map(option => {
         const foodOptions = foodLocations.filter(location => {
             return location.category.split(',').includes(option);
+        }).sort((a, b) => {
+            if (a.discount && b.discount) {
+                return b.discount - a.discount;
+            } else if (a.discount) {
+                return -1;
+            } else {
+                return 1;
+            }
         });
 
         return (

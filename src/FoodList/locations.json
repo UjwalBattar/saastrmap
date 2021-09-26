@@ -2,7 +2,7 @@
     {
       "name": "Sapporo Rock-N-Roll Sushi",
       "id": 1,
-      "description": "This place slaps. Super fresh sushi, friendly staff, delicious cooked dishes for your non-sushi eating friends, and amazing happy hour deals.\n\nPro tip: order off the menu and ask for the \"secret box\" - an ever-changing section of daily highlights with raw and cooked exclusive gems. \n\nTell them the team at Recapped.io sent you and you'll get 10% off your bill!",
+      "description": "This place slaps. Super fresh sushi, friendly staff, delicious cooked dishes for your non-sushi eating friends, and amazing happy hour deals. Pro tip: order off the menu and ask for the \"secret box\" - an ever-changing section of daily highlights with raw and cooked exclusive gems. Tell them the team at Recapped.io sent you and you'll get 10% off your bill!",
       "Characters": 361,
       "Status": "Approved",
       "discount": 10,
@@ -17,7 +17,7 @@
     {
       "name": "Espetus Churrascaria",
       "id": 2,
-      "description": "Brazilian steakhouse",
+      "description": "Your classic Brazilian steakhouse. Does it get better than a parade of servers coming up to you and cutting meat off a stick tableside? We think not. Just make sure to bring your appetite.",
       "Characters": 21,
       "Status": "No discount",
       "discount": "",
@@ -32,7 +32,7 @@
     {
       "name": "Limon",
       "id": 3,
-      "description": "Modern Peruvian fusion restaurant\nrotisserie\nsangria",
+      "description": "Offering modern Peruvian and Latin fusion dishes in a celebratory and welcoming atmosphere. This is a family owned and run business and they try to treat you like a member of the family. Their sangria is hella good. In short, this joint never disappoints.",
       "Characters": 53,
       "Status": "No discount",
       "discount": "",
@@ -46,7 +46,7 @@
     },
     {
       "name": "The Barrel Bistro And Wine Bar",
-      "description": "",
+      "description": "The vibe here feels like if a fancy wine store opened up their floor to serve their customers meals and glasses of wine. There's a wide variety of classic food pairings for your wine order. They've got a great rotating wine list.",
       "id": 4,
       "Characters": 0,
       "Status": "No discount",
@@ -61,7 +61,7 @@
     },
     {
       "name": "Evvia",
-      "description": "rustic open kitchen",
+      "description": "If you like Greek food, but still want something elevated and refined, Evvia is the place for you. They've got a super cute outdoor patio and the entire place is just the ideal combination of sophistication and old-world charm. A rustic fireplace warms the room while the large, polished wood Chef’s table, hand-made pottery and copper cookware create the feel of a Mediterranean country inn. The ambiance sets the stage for a most memorable dining experience. This is one of the best restaurants in the area bar none.",
       "Characters": 20,
       "id": 5,
       "Status": "No discount",
@@ -76,7 +76,7 @@
     },
     {
       "name": "Sundance The Steakhouse",
-      "description": "leather booths, candlelit mahagony\nprime rib",
+      "description": "When you hear \"steak house\" what comes to your mind? Chances are you've probably come pretty close to imaging Sundance. It's designed with that in mind, your classic steak house with leather booths, a candlelit mahogany dining room, generous cuts of perfectly cooked prime rib and Angus steaks, seafood and a 450-item wine list. Sit back, relax and loosen your belt a notch or two.",
       "Characters": 45,
       "id": 6,
       "Status": "No discount",
@@ -91,7 +91,7 @@
     },
     {
       "name": "Tamarine Restaurant",
-      "description": "",
+      "description": "We love Vietnamese food because it's got that balance of being fresh and healthy and comforting. But sometimes it is nice to share that experience in an elevated way. Enter Tamarine. Order anything on the menu, you can't go wrong here. Just do yourself a favor and save a little room for the banana beignets as a dessert.",
       "Characters": 0,
       "id": 33,
       "Status": "No discount",
@@ -106,11 +106,11 @@
     },
     {
       "name": "Pacific Catch",
-      "description": "Why settle for one type of cuisine when you can sample the entire Pacific Ocean? Catch a ride on this pacific flavor journey with a wide range of dishes brought to you straight from wave to table.\n\nThis is our favorite spot for fish tacos.\n\nTell them the team at Recapped.io sent you and you'll get 15% off your bill!",
+      "description": "Why settle for one type of cuisine when you can sample the entire Pacific Ocean? Their diverse menu is inspired by flavors of the Pacific and features freshly prepared bowls, tacos, sushi, poke and signature sandwiches such as their Lobster Roll and Wagyu Cheeseburger. Tell them the team at Recapped.io sent you and you'll get 15% off your bill!",
       "Characters": 317,
       "id": 7,
       "Status": "Approved",
-      "discount": "15%",
+      "discount": 15,
       "image": "https://dl.airtable.com/.attachments/7fd084267a605f1f9c5b2bec813d0211/d8192cbd/D3EC9539-9671-41CB-AE8A-F24D0F50CDA3_1_105_c.jpeg",
       "tags": "Seafood, Sushi Bars, Tacos",
       "category": "Dinner,Lunch",
@@ -121,7 +121,7 @@
     },
     {
       "name": "Pancho Villa Taqueria",
-      "description": "",
+      "description": "You've come all this way, so you have to try a burrito, right? Well, now you know where to go.  Look, it's a simple place, you order at the counter and seat your self. But the food is fresh and they often have interesting burrito combos you're not gonna find at your local Chipotle.",
       "Characters": 0,
       "id": 8,
       "Status": "No discount",
@@ -136,7 +136,7 @@
     },
     {
       "name": "The Fish Market - San Mateo",
-      "description": "Love their gluten free and vegan options",
+      "description": "Forget farm to table, it's all about the ocean to table now, but we also love their gluten free and vegan options. If you're looking for shellfish, we recommend the king crab legs.",
       "Characters": 40,
       "id": 9,
       "Status": "No discount",
@@ -152,10 +152,10 @@
     {
       "name": "Nola",
       "id": 10,
-      "description": "A hella good tribute to N'awlins with a cute outdoor space and one of the largest collections of authentic Southern Folkart west of the Mississippi. Get your fix of cajun classics and cocktails served in pitchers (or regular glasses if you so desire). Tryna squeeze out a little more summer before giving in to fall? Grab yourself a boozy slush. \n\nTell them the team at Recapped.io sent you and you'll get 20% off your bill!",
+      "description": "A hella good tribute to N'awlins with a cute outdoor space and one of the largest collections of authentic Southern Folkart west of the Mississippi. Get your fix of cajun classics and cocktails served in pitchers (or regular glasses if you so desire). Tryna squeeze out a little more summer before giving in to fall? Grab yourself a boozy slush. Tell them the team at Recapped.io sent you and you'll get 20% off your bill!",
       "Characters": 424,
       "Status": "Approved",
-      "discount": "20%",
+      "discount": 20,
       "image": "https://dl.airtable.com/.attachments/c7c6152d2507164e8c2fd0f7e10a1e79/c1053267/NolaHomepageimage.jpeg",
       "tags": "Bar, Restaurant",
       "category": "Drinks",
@@ -166,11 +166,11 @@
     },
     {
       "name": "Mortar & Pestle",
-      "description": "Chic cocktails and Indian food that just slaps. The best combo bar naan.\n\nThis spot has Indian-inspired libations you won't find anywhere else. We love their smoke-infused cocktails to wind down our day. Pair it with whatever Indian street food tickles your fancy and thank us later.\n\nTell them the team at Recapped.io sent you and you'll get 15% off your bill!",
+      "description": "Chic cocktails and Indian food that just slaps. The best combo bar naan. This spot has Indian-inspired libations you won't find anywhere else. We love their smoke-infused cocktails to wind down our day. Pair it with whatever Indian street food tickles your fancy and thank us later. Tell them the team at Recapped.io sent you and you'll get 15% off your bill!",
       "Characters": 361,
       "id": 11,
       "Status": "Approved",
-      "discount": "15%",
+      "discount": 15,
       "image": "https://dl.airtable.com/.attachments/34d48fa530d2be6b895800bcf1909ca6/f9a03706/MortarandPestle.jpeg",
       "tags": "Cocktail Bar, Indian",
       "category": "Drinks",
@@ -181,7 +181,7 @@
     },
     {
       "name": "The Swingin' Door",
-      "description": "Wednesday night karaoke so you can annoy everyone with your rendition of Fancy Like.\n\nIf you're looking for fish and chips or your typical British Pub, look no further. It's an intimate, hole in the wall spot that's well suited for small groups. A good place to bump elbows with some of the locals from the Bay Area.\n\nIf you're in town a bit early and looking for something on Sunday night, they've got trivia.",
+      "description": "Wednesday night karaoke so you can annoy everyone with your rendition of Fancy Like. If you're looking for fish and chips or your typical British Pub, look no further. It's an intimate, hole in the wall spot that's well suited for small groups. A good place to bump elbows with some of the locals from the Bay Area. If you're in town a bit early and looking for something on Sunday night, they've got trivia.",
       "Characters": 410,
       "id": 12,
       "Status": "No discount",
@@ -196,7 +196,7 @@
     },
     {
       "name": "Barrelhouse",
-      "description": "Outdoor seating and bougie cocktails, what more could you ask for?\n\nYou won't find a full food menu here, but their empanadas and adult lunchables (or charcuterie boards, if you're pedantic) will hit the spot. \n\nGet 1/2 OFF Canyon Road Bottles of Wine from Sunday through Wednesday.",
+      "description": "Outdoor seating and bougie cocktails, what more could you ask for? You won't find a full food menu here, but their empanadas and adult lunchables (or charcuterie boards, if you're pedantic) will hit the spot. Get 1/2 OFF Canyon Road Bottles of Wine from Sunday through Wednesday.",
       "Characters": 282,
       "id": 13,
       "Status": "No discount",
@@ -211,7 +211,7 @@
     },
     {
       "name": "O'Neill's Irish Pub",
-      "description": "Your typical Irish Sports Bar for when you just need a drink. It's small, cozy and a little basic, but that's also part of the charm. Sometimes you just need a no-fuss spot, right?\n\nThey offer karaoke on Tuesday nights and pub quizzes on Wednesday nights.",
+      "description": "Your typical Irish Sports Bar for when you just need a drink. It's small, cozy and a little basic, but that's also part of the charm. Sometimes you just need a no-fuss spot, right? They offer karaoke on Tuesday nights and pub quizzes on Wednesday nights.",
       "Characters": 255,
       "id": 14,
       "Status": "No discount",
@@ -226,7 +226,7 @@
     },
     {
       "name": "Route 92 Sports Bar",
-      "description": "Awesome, classic dive bar\n\nGolden Tee and Darts\ndive bar\nmichigan",
+      "description": "What happens when a dive bar meets a sports bar? Route 92 - a fun, laid back atmosphere with a friendly mix of locals. This is a good spot to go if you don't need all the frills, but like being a little more active than sitting on a stool all night tossing 'em back. Come here if you're looking to shoot some pool, throw some darts, play some shuffle board, or play some tunes on the juke box. And did we mention they have Golden Tee?",
       "Characters": 66,
       "id": 15,
       "Status": "No discount",
@@ -241,7 +241,7 @@
     },
     {
       "name": "Bucky's Cocktail Lounge",
-      "description": "Shitty dive bar like from your grandma's basement. Buy a drink or fuck off",
+      "description": "A true locals hangout. An unpretentious spot to avoid the tech bros. If you're looking for a fun but low-key night out, and you're not working with a massive expense account, Bucky's has got you covered. They also have a spacious backyard with lighting, giving it a fun and relaxed vibe.",
       "Characters": 74,
       "id": 16,
       "Status": "No discount",
@@ -256,7 +256,7 @@
     },
     {
       "name": "Flights 101 Club Lounge",
-      "description": "spacious lounge water views and planes",
+      "description": "Awesome views of the bay and conveniently located near the airport (they've got a free shuttle, so this can be a good spot to hang before your flight). They've got a spacious lounge and some tasty bites, but you will pay a premium for the convenience factor. Still, this can be a nice spot to hit up before or after a night out.",
       "Characters": 39,
       "id": 17,
       "Status": "No discount",
@@ -271,7 +271,7 @@
     },
     {
       "name": "B Street & Vine",
-      "description": "Tapas and Fancy bruschetta combos",
+      "description": "This is a nice and cozy indoor/outdoor wine bar. Besides their extensive wine list, try their tapas or their fancy bruschetta combos - which really stand out. Like why wouldn't you want a grand selection of bruschetta to choose from to eat with a glass of wine and good company after a day of checking out SaaStr events?",
       "Characters": 33,
       "id": 18,
       "Status": "No discount",
@@ -286,7 +286,7 @@
     },
     {
       "name": "Paddy Flynn's",
-      "description": "Meet the gang at Paddy's because It's Always Sunny in San Mateo.",
+      "description": "If It's Always Sunny in Philadelphia was made in San Mateo, it would take place at Paddy's. It's a family run spot, and ok, they're much more put together than the IASIP gang, they stay true to the local dive bar atmosphere. They specialize in Irish drinks like Guinness, Jameson and other Irish whiskey, beers, and ciders.",
       "Characters": 64,
       "id": 19,
       "Status": "No discount",
@@ -301,7 +301,7 @@
     },
     {
       "name": "The Wine Room Palo Alto",
-      "description": "cozy convivial\nRustic wine bar pours select global vintages by the glass in an adobe space with a lounge area.",
+      "description": "Cozy and convivial, this rustic wine bar pours select global vintages by the glass in a cool adobe (architecture) building with a lovely lounge area. The building reminds you of a mid century Mission style with the red clay roof tiles. It's small and intimate and dark in a good way. They don't really serve meals, but you can get some good snacks and sweets to pair with the wine. Here, it's all about the wine.",
       "Characters": 111,
       "id": 20,
       "Status": "No discount",
@@ -316,7 +316,7 @@
     },
     {
       "name": "The Patio",
-      "description": "The sports bar, not the coffee shop.",
+      "description": "Not to be confused by the coffee shop which bears the same name, The Patio is home to the longest bar in Palo Alto. You can expect 20+ flat screen TV's, DJ entertainment, dancing, karaoke, trivia, happy hour and of course... a large outdoor seating area, hence their namesake. This is a great spot for happy hour and a casual hangout. Just be warned, it does have a tendency to get packed.",
       "Characters": 36,
       "id": 21,
       "Status": "No discount",
@@ -331,7 +331,7 @@
     },
     {
       "name": "Old Pro",
-      "description": "The screens: More than 24 inside and outside. The menu: Only in California do the Pac-12 game-day eats include trendy, locally sourced fare like Smoked Diestel Turkey Chili, made with organic, non-GMO turkey; an Avocado-Kale Caesar salad; and Crispy Brussels Sprouts with a Thai chile glaze. But they’ve got the obligatory wings, sliders and pizza, too. \nBull riding",
+      "description": "Your classic local sports bar with a California twist. After all, only in Cali do game-day eats include trendy, locally sourced fare like Smoked Diestel Turkey Chili, made with organic, non-GMO turkey; an Avocado-Kale Caesar salad; and Crispy Brussels Sprouts with a Thai chile glaze. There's a ton of TV's both inside and out, and a great atmosphere. If you're feeling adventurous, hop on their mechanical bull.",
       "Characters": 366,
       "id": 22,
       "Status": "No discount",
@@ -346,11 +346,11 @@
     },
     {
       "name": "Suavecito Birria & Tacos",
-      "description": "If Maryland does crab cakes and football, Cali does Mexican food. If you're visiting from out of state, it's something you just have to try.\n\nThis is a takeout only joint, but in our opinion, it's the best Mexican food you'll find close to the events at SaaStr.\n\nTell them the team at Recapped.io sent you and you'll get 15% off your bill!",
+      "description": "If Maryland does crab cakes and football, Cali does Mexican food. If you're visiting from out of state, it's something you just have to try. This is a takeout only joint, but in our opinion, it's the best Mexican food you'll find close to the events at SaaStr. Tell them the team at Recapped.io sent you and you'll get 15% off your bill!",
       "Characters": 339,
       "id": 23,
       "Status": "Approved",
-      "discount": "15%",
+      "discount": 15,
       "image": "https://dl.airtable.com/.attachments/756a7b32647a1346dd28043e100e660b/89841095/familymeal1.jpeg",
       "tags": "Tacos, Latin American",
       "category": "Lunch",
@@ -361,7 +361,7 @@
     },
     {
       "name": "Crepevine Restaurant",
-      "description": "",
+      "description": "Yes, they serve more than crepes, and yes, their other dishes are good, but are you really gonna be that person who goes to a place named Crepevine and then not order a crepe?",
       "Characters": 0,
       "id": 24,
       "Status": "No discount",
@@ -376,7 +376,7 @@
     },
     {
       "name": "Jack's Restaurant & Bar San Mateo",
-      "description": "",
+      "description": "Come to Jack's if you have a hankering for classic American dishes. This is a good spot for breakfast as well. Very delicious food, strong drinks, and attentive staff. What more could you ask for?",
       "Characters": 0,
       "id": 25,
       "Status": "No discount",
@@ -391,7 +391,7 @@
     },
     {
       "name": "Mingalaba",
-      "description": "Great vegan options",
+      "description": "How often do you get to dine on Burmese cuisine? This spot has Burmese and Chinese dishes with lots of spicy options, if that's your thing. Also, plenty of great vegan options. If you're looking for something a little different, and tend to like Asian food, give this spot a try.",
       "Characters": 19,
       "id": 26,
       "Status": "No discount",
@@ -406,7 +406,7 @@
     },
     {
       "name": "Rise Woodfire",
-      "description": "",
+      "description": "Elevated comfort food featuring wood-fired pizza and rotisserie fare in the heart of Downtown San Mateo by the train station. If you're not amped for pizza, they've got prime rib and French Dip sandwiches that we're big fans of.",
       "Characters": 0,
       "id": 27,
       "Status": "No discount",
@@ -421,7 +421,7 @@
     },
     {
       "name": "Taverna",
-      "description": "",
+      "description": "The food may be upscale Greek, but the dining experience is much more low-key. A good spot if you like great food without pretentiousness. At the same time, you can expect super attentive staff and possibly the highest level of service you'll experience eating out. If your team needs to improve their customer relationship services, take them here so they can see how it's done.",
       "Characters": 0,
       "id": 28,
       "Status": "No discount",

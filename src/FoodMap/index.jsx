@@ -20,7 +20,6 @@ const FoodMap = (props) => {
     const [markers, setMarkers] = useState([]);
 
     const onMarkerClick = (markerProps, marker, e) => {
-        console.log({marker})
         setCurrentRestaurant(markerProps.restaurant);
         setCurrentMarker(marker);
         setShowInfoWindow(true);
