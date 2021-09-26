@@ -15,6 +15,27 @@ const getTagColorClass = () => {
     return colorClasses[idx%colorClasses.length];
 }
 
+const FoodOption = ({name, address, tags, description, discount, id, image, onClick}) => {
+    return (
+        <div className='py-4 border-b-2 last:border-b-0 cursor-pointer' key={name+id} onClick={() => onClick(id)}>
+            <img alt={name} className='w-32 max-h-24 rounded shadow-lg float-left object-cover mr-4' src={image}/>
+            <h3 className='text-sm text-gray-700 font-semibold'>{name}</h3>
+            <p className='text-gray-600 text-xs'>{address}</p>
+            <div className='flex justify-between'>
+                <div className='flex flex-wrap'>
+                    { tags.split(',').map(tag => {
+                        return (
+                            <p key={id+tag} className={`inline my-1 mr-2 px-2 py-1  ${getTagColorClass()} rounded-lg text-xs font-semibold`}>{tag}</p>
+                        );
+                    })}
+                </div>
+            </div>
+            {discount ? <p className='text-gray-600 text-2xs font-semibold'>{discount}% off with code "Recapped"</p> : null}
+            <p className='text-gray-600 text-xs'>{description}</p>
+        </div>
+    );
+}
+
 const FoodList = (props) => {
     const { shouldShow, onRestaurantClick } = props;
     const [currentOption, setCurrentOption] = useState(OPTION_LUNCH);
@@ -26,32 +47,10 @@ const FoodList = (props) => {
             return location.category.split(',').includes(option);
         });
 
-        const foodOptionsHTML = foodOptions && foodOptions.map((foodOption, idx) => {
-            const { name, address, tags, description, discount, id, image } = foodOption;
-            return (
-                <div className='py-4 border-b-2 last:border-b-0 cursor-pointer' key={name+idx} onClick={() => onRestaurantClick(id)}>
-                    <img alt={name} className='w-32 max-h-24 rounded shadow-lg float-left object-cover mr-4' src={image}/>
-                    <h3 className='text-sm text-gray-700 font-semibold'>{name}</h3>
-                    <p className='text-gray-600 text-xs'>{address}</p>
-                    <div className='flex justify-between'>
-                        <div className='flex flex-wrap'>
-                            { tags.split(',').map(tag => {
-                                return (
-                                    <p key={idx+tag} className={`inline my-1 mr-2 px-2 py-1  ${getTagColorClass()} rounded-lg text-xs font-semibold`}>{tag}</p>
-                                );
-                            })}
-                        </div>
-                    </div>
-                    {discount ? <p className='text-gray-600 text-2xs font-semibold'>{discount}% off with code "Recapped"</p> : null}
-                    <p className='text-gray-600 text-xs'>{description}</p>
-                </div>
-            );
-        });
-
         return (
             <div className='pb-4' key={option}>
                 <h4 id={option} className='pt-4 text-gray-800 text-xl font-medium'>{option}</h4>
-                { foodOptionsHTML }
+                { foodOptions && foodOptions.map(foodOption => <FoodOption key={`${foodOption.id}-foodOption`} {...foodOption} onClick={onRestaurantClick}/>) }
             </div>
         )
     }), [onRestaurantClick]);

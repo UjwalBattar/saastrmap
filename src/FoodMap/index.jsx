@@ -1,6 +1,6 @@
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
 import PropTypes from 'prop-types';
-import { useEffect, useMemo, useState } from 'react';
+import { createRef, useEffect, useState } from 'react';
 import { getAllRestaurants } from '../utils';
 import mapStyle from './mapStyle.json';
 
@@ -14,11 +14,15 @@ const FoodMap = (props) => {
     };
 
     const [currentRestaurant, setCurrentRestaurant] = useState(null);
+    const [currentMarker, setCurrentMarker] = useState(null);
     const [showInfoWindow, setShowInfoWindow] = useState(false);
     const [restaurants, setRestaurants] = useState(null);
+    const [markers, setMarkers] = useState([]);
 
     const onMarkerClick = (markerProps, marker, e) => {
+        console.log({marker})
         setCurrentRestaurant(markerProps.restaurant);
+        setCurrentMarker(marker);
         setShowInfoWindow(true);
     }
 
@@ -26,19 +30,21 @@ const FoodMap = (props) => {
         setRestaurants(getAllRestaurants());
     }, []);
 
-    const markers = useMemo(() => {
-        return restaurants && restaurants.map(restaurant => {
+    useEffect(() => {
+        let newMarkers = restaurants && restaurants.map(restaurant => {
             const {lat, lng, name, id} = restaurant;
             return (
                 <Marker
                     key={id}
                     title={name}
+                    ref={createRef()}
                     restaurant={restaurant}
                     position={{lat, lng}}
                     onClick={onMarkerClick}
                 />
             );
-         })
+         });
+         setMarkers(newMarkers);
     }, [restaurants]);
 
     useEffect(() => {
@@ -46,9 +52,10 @@ const FoodMap = (props) => {
             return;
         }
         setShowInfoWindow(true);
-        const selectedRestaurant = restaurants.find(restaurant => restaurant.id === selectedResturantId);
-        setCurrentRestaurant(selectedRestaurant);
-    }, [selectedResturantId, restaurants]);
+        const selectedMarker = markers.find(marker => marker.props.restaurant.id === selectedResturantId);
+        setCurrentMarker(selectedMarker.ref.current.marker);
+        setCurrentRestaurant(selectedMarker.props.restaurant);
+    }, [selectedResturantId, markers]);
 
     const mapLoaded = (mapProps, map) => {
         map.setOptions({
@@ -56,7 +63,7 @@ const FoodMap = (props) => {
         });
     }
 
-    const windowPosition = currentRestaurant ? {lng: currentRestaurant.lng, lat: currentRestaurant.lat + 0.003} : null; // give it some padding on the top
+    // const windowPosition = currentRestaurant ? {lng: currentRestaurant.lng, lat: currentRestaurant.lat + 0.003} : null; // give it some padding on the top
 
     return (
         <div className={`mapContainer flex items-center w-screen h-92vh relative ${ !shouldShow && 'hidden'}`}>
@@ -68,7 +75,7 @@ const FoodMap = (props) => {
             >
                 { markers }
                 <InfoWindow
-                    position={windowPosition}
+                    marker={currentMarker}
                     visible={showInfoWindow}
                     onClose={() => setShowInfoWindow(false)}
                 >
