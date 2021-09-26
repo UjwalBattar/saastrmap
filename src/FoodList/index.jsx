@@ -15,13 +15,7 @@ const getTagColorClass = () => {
     return colorClasses[idx%colorClasses.length];
 }
 
-const FoodOption = ({name, address, tags, description, discount, id, image, lat, lng, onClick}) => {
-    const safeAddress = encodeURIComponent(address);
-    const uberClick = e => {
-        e.preventDefault();
-        e.stopPropagation();
-        window.location.href = `https://m.uber.com/ul/?client_id=gfX7c7JqlZL9yj9n1Pa_EJb8TBddthb5&action=setPickup&pickup=my_location&dropoff[formatted_address]=${safeAddress}&dropoff[latitude]=${lat}&dropoff[longitude]=${lng}`;
-    }
+const FoodOption = ({name, address, tags, description, discount, id, image, onClick}) => {
     return (
         <div className='pt-4 pb-2 border-b-2 last:border-b-0 cursor-pointer' key={name+id} onClick={() => onClick(id)}>
             <img alt={name} className='w-32 max-h-24 rounded shadow-lg float-left object-cover mr-4' src={image}/>
@@ -38,9 +32,6 @@ const FoodOption = ({name, address, tags, description, discount, id, image, lat,
             </div>
             {discount ? <p className='text-gray-600 text-2xs font-semibold'>{discount}% off with code "Recapped"</p> : null}
             <p className='text-gray-600 text-xs'>{description}</p>
-            <div className='flex justify-center pt-2 px-4'>
-                <button className='text-2xs shadow-md bg-gray-600 text-white rounded px-2 py-1' onClick={uberClick}>Call an Uber</button>
-            </div>
         </div>
     );
 }
