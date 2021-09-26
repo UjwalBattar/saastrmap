@@ -7,15 +7,12 @@ const Heart = (props) => {
         <div className={`p-4 pt-0 lg:px-64 h-screen relative ${!shouldShow && 'hidden'}`}>
             <RecappedBanner />
             <div className='py-4 text-md'>
-                <h4 className='font-medium'>Why we made this</h4>
-                <p className='text-gray-700 py-2'>We realize this may be your first time in the Bay Area, so the Recapped team made this simple curated guide of our favorites spots.</p>
-                <h4 className='font-medium'>Who we are</h4>
-                <p className='text-gray-700 py-2'><a className='text-blue-500' href='https://www.recapped.io'>Recapped.io</a> is the easiest way for sales and success teams to collaborate with their customers on complex deals. If you struggle with a lengthy sales cycle, we'd love to help you out.</p>
-                <p className='text-gray-700 py-2'>See you around SaaStr!</p>
-                <p className='text-gray-700 py-2 text-right'>- ❤️ the Recapped Team</p>
+                <p className='text-gray-700 py-2'>Hey! We realize this may be your first time in the Bay Area, so the Recapped.io team made this simple curated guide of some of the great spots.</p>
+                <p className='text-gray-700 py-2'>We believe in delivering as much value as possible to our community, so hopefully you find it useful. </p>
+                <p className='text-gray-700 py-2'>Recapped.io is the easiest way for Sales and Success teams to collaborate internally <b>and with their customers</b> on complex deals. We integrate directly into your tools and help accelerate revenue by 28%, create a consistent playbook, see what's actually happening in a deal, and ensure seamless handoffs to post-sales.</p>
             </div>
             <div className='flex justify-center pt-8'>
-                <a className='bg-blue-700 shadow-lg rounded text-white py-2 px-4 text-xs font-semibold' href='https://www.recapped.io/demo.html'>Request demo</a>
+                <a className='bg-blue-700 shadow-lg rounded text-white py-2 px-4 text-xs font-semibold' href='https://www.recapped.io/demo.html?utm_source=saastrmap'>Learn More</a>
             </div>
         </div>
     )

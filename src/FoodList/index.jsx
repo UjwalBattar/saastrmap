@@ -11,7 +11,7 @@ const OPTION_DINNER = 'Dinner';
 
 const FoodOption = ({name, address, tags, description, discount, id, image, onClick}) => {
     return (
-        <div className='pt-4 pb-2 border-b-2 last:border-b-0 cursor-pointer' key={name+id} onClick={() => onClick(id)}>
+        <div className='py-6 border-b-2 last:border-b-0 cursor-pointer foodOption' key={name+id} onClick={() => onClick(id)}>
             <img alt={name} className='w-32 max-h-24 rounded shadow-lg float-left object-cover mr-4' src={image}/>
             <RestaurantInfo id={id} name={name} address={address} tags={tags} />
             {discount ? <p className='discountText text-2xs font-semibold'>{discount}% off with code "Recapped"</p> : null}
