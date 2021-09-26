@@ -15,12 +15,12 @@ const getTagColorClass = () => {
     return colorClasses[idx%colorClasses.length];
 }
 
-const FoodOption = ({name, address, tags, description, discount, id, image, onClick}) => {
+const FoodOption = ({name, address, tags, description, discount, id, image, lat, lng, onClick}) => {
     const safeAddress = encodeURIComponent(address);
     const uberClick = e => {
         e.preventDefault();
         e.stopPropagation();
-        window.location.href = `https://m.uber.com/ul/?client_id=gfX7c7JqlZL9yj9n1Pa_EJb8TBddthb5&action=setPickup&dropoff[formatted_address]=${safeAddress}`;
+        window.location.href = `https://m.uber.com/ul/?client_id=gfX7c7JqlZL9yj9n1Pa_EJb8TBddthb5&action=setPickup&dropoff[formatted_address]=${safeAddress}&dropoff[latitude]=${lat}&dropoff[longitude]=${lng}`;
     }
     return (
         <div className='pt-4 pb-2 border-b-2 last:border-b-0 cursor-pointer' key={name+id} onClick={() => onClick(id)}>
