@@ -22,13 +22,15 @@ const FoodList = (props) => {
     const getOptionClass = (optionName) => isCurrentOption(optionName) && 'border-b-2 foodType-active';
 
     const foodOptions = useMemo(() => [OPTION_LUNCH, OPTION_DINNER, OPTION_DRINKS].map(option => {
-        const foodOptions = foodLocations[option];
+        const foodOptions = foodLocations.filter(location => {
+            return location.category.split(',').includes(option);
+        });
 
         const foodOptionsHTML = foodOptions && foodOptions.map((foodOption, idx) => {
-            const { name, address, tags, description, discount, id, photo } = foodOption;
+            const { name, address, tags, description, discount, id, image } = foodOption;
             return (
                 <div className='py-4 border-b-2 last:border-b-0 cursor-pointer' key={name+idx} onClick={() => onRestaurantClick(id)}>
-                    <img alt={name} className='w-32 max-h-24 rounded shadow-lg float-left object-cover mr-4' src={photo}/>
+                    <img alt={name} className='w-32 max-h-24 rounded shadow-lg float-left object-cover mr-4' src={image}/>
                     <h3 className='text-sm text-gray-700 font-semibold'>{name}</h3>
                     <p className='text-gray-600 text-xs'>{address}</p>
                     <div className='flex justify-between'>

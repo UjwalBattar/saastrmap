@@ -6,7 +6,7 @@ import mapStyle from './mapStyle.json';
 
 const FoodMap = (props) => {
     const { shouldShow, selectedResturantId } = props;
-    const coords = { lat: 40.774632, lng: -73.946838 };
+    const coords = { lat: 37.546623, lng: -122.301694 };
     const style = {
         width: '100%',
         minWidth: '375px',

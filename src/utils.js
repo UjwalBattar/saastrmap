@@ -5,9 +5,5 @@ export const TAB_MAP = 'map';
 export const TAB_HEART = 'heart';
 
 export const getAllRestaurants = () => {
-    let restaurants = [];
-    ['Lunch', 'Dinner', 'Drinks'].forEach(type => {
-       restaurants.push(...locations[type]);
-    });
-    return restaurants;
+    return locations;
 }
