@@ -1,7 +1,7 @@
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
 import PropTypes from 'prop-types';
 import { createRef, useEffect, useState } from 'react';
-import { getAllRestaurants } from '../utils';
+import { getAllRestaurants, TYPE_RESTAURANT } from '../utils';
 import mapStyle from './mapStyle.json';
 
 const FoodMap = (props) => {
@@ -31,15 +31,22 @@ const FoodMap = (props) => {
 
     useEffect(() => {
         let newMarkers = restaurants && restaurants.map(restaurant => {
-            const {lat, lng, name, id} = restaurant;
+            const {lat, lng, name, id, type} = restaurant;
+            const markerProps = {
+                key: id,
+                title: name,
+                restaurant,
+                position: {lat, lng},
+                onClick: onMarkerClick,
+            };
+            if (type !== TYPE_RESTAURANT) {
+                markerProps.icon = {
+                    url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+                };
+            }
             return (
                 <Marker
-                    key={id}
-                    title={name}
-                    ref={createRef()}
-                    restaurant={restaurant}
-                    position={{lat, lng}}
-                    onClick={onMarkerClick}
+                    {...markerProps}
                 />
             );
          });

@@ -15,6 +15,13 @@
       "address": "2456 S El Camino Real, San Mateo, CA 94403"
     },
     {
+      "name": "SaaStr",
+      "id": 0,
+      "lat": 37.546623,
+      "lng": -122.301694,
+      "category": ""
+    },
+    {
       "name": "Espetus Churrascaria",
       "id": 2,
       "description": "Your classic Brazilian steakhouse. Does it get better than a parade of servers coming up to you and cutting meat off a stick tableside? We think not. Just make sure to bring your appetite.",
