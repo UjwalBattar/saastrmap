@@ -56,7 +56,7 @@ const FoodList = (props) => {
         });
 
         return (
-            <div className='pb-4' key={option}>
+            <div className='pb-4 footOptionContainer' key={option}>
                 <h4 id={option} className='pt-4 text-gray-800 text-xl font-medium'>{option}</h4>
                 { foodOptions && foodOptions.map(foodOption => <FoodOption key={`${foodOption.id}-foodOption`} {...foodOption} onClick={onRestaurantClick}/>) }
             </div>
