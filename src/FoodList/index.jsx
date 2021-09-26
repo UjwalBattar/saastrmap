@@ -3,34 +3,18 @@ import { useMemo, useState } from "react";
 import PropTypes from "prop-types";
 import foodLocations from './locations.json';
 import RecappedBanner from '../RecappedBanner';
+import RestaurantInfo from '../RestaurantInfo';
 
 const OPTION_LUNCH = 'Lunch';
 const OPTION_DRINKS = 'Drinks';
 const OPTION_DINNER = 'Dinner';
 
-const getTagColorClass = () => {
-    // NOTE: need to spell these class names out so they don't get tree-shaken in prod https://tailwindcss.com/docs/optimizing-for-production
-    const colorClasses = ['text-blue-600 bg-blue-100', 'text-purple-600 bg-purple-100', 'text-indigo-600 bg-indigo-100', 'text-green-600 bg-green-100', 'text-yellow-600 bg-yellow-100'];
-    let idx = Math.floor(Math.random() * colorClasses.length);
-    return colorClasses[idx%colorClasses.length];
-}
-
 const FoodOption = ({name, address, tags, description, discount, id, image, onClick}) => {
     return (
         <div className='pt-4 pb-2 border-b-2 last:border-b-0 cursor-pointer' key={name+id} onClick={() => onClick(id)}>
             <img alt={name} className='w-32 max-h-24 rounded shadow-lg float-left object-cover mr-4' src={image}/>
-            <h3 className='text-sm text-gray-700 font-semibold'>{name}</h3>
-            <p className='text-gray-600 text-xs'>{address}</p>
-            <div className='flex justify-between'>
-                <div className='flex flex-wrap'>
-                    { tags.split(',').map(tag => {
-                        return (
-                            <p key={id+tag} className={`inline my-1 mr-2 px-2 py-1  ${getTagColorClass()} rounded-lg text-2xs font-semibold`}>{tag}</p>
-                        );
-                    })}
-                </div>
-            </div>
-            {discount ? <p className='text-green-500 text-2xs font-semibold'>{discount}% off with code "Recapped"</p> : null}
+            <RestaurantInfo id={id} name={name} address={address} tags={tags} />
+            {discount ? <p className='discountText text-2xs font-semibold'>{discount}% off with code "Recapped"</p> : null}
             <p className='text-gray-600 text-xs'>{description}</p>
         </div>
     );
