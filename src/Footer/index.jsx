@@ -21,7 +21,7 @@ const Footer = (props) => {
         const footer = document.getElementById('footer');
         const { bottom } = footer.getBoundingClientRect();
         if (Math.floor(bottom) > window.innerHeight) {
-            footer.style.bottom = SAFARI_MOBILE_BOTTOM_MENU_HEIGHT + 40;
+            footer.style.bottom = SAFARI_MOBILE_BOTTOM_MENU_HEIGHT + 100;
         } else {
             footer.style.bottom = 0;
         }
