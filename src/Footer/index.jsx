@@ -30,7 +30,7 @@ const Footer = (props) => {
         <footer id='footer' className='footer flex justify-between items-center lg:px-64 w-screen h-16 px-4 bg-gray-200 w-screen fixed bottom-0'>
             <FooterTab tab={TAB_LIST} className='icon-list2' onClick={onClick}/>
             <FooterTab tab={TAB_MAP} className='icon-location' onClick={onClick}/>
-            <FooterTab tab={TAB_HEART} className='icon-heart' onClick={onClick}/>
+            <FooterTab tab={TAB_HEART} className='icon-home' onClick={onClick}/>
         </footer>
     )
 }

@@ -71,8 +71,6 @@ const FoodMap = (props) => {
         });
     }
 
-    // const windowPosition = currentRestaurant ? {lng: currentRestaurant.lng, lat: currentRestaurant.lat + 0.003} : null; // give it some padding on the top
-
     return (
         <div className={`mapContainer flex items-center w-screen h-92vh relative ${ !shouldShow && 'hidden'}`}>
             <Map
@@ -91,6 +89,7 @@ const FoodMap = (props) => {
                     {currentRestaurant && currentRestaurant.type === TYPE_FEATURED && (
                         <div>
                             <h3 className='text-sm text-gray-700 font-semibold'>{currentRestaurant.name}</h3>
+                            <p className='text-gray-600 text-xs'>{currentRestaurant.address}</p>
                         </div>
                     )}
                 </InfoWindow>
