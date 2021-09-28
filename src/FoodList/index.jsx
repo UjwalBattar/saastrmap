@@ -46,9 +46,10 @@ const FoodList = (props) => {
             </div>
         )
     }), [onRestaurantClick]);
+    
+    const showShareButton = navigator.share;
 
     const shareClick = () => {
-        console.log('share')
         if (navigator.share) {
             navigator.share({
               title: 'https://saastrmap.com/',
@@ -71,7 +72,7 @@ const FoodList = (props) => {
                     <a href={`#${OPTION_DINNER}`} className={`${getOptionClass(OPTION_DINNER)} p-1 foodType cursor-pointer`} onClick={() => setCurrentOption(OPTION_DINNER)}>{OPTION_DINNER}</a>
                     <a href={`#${OPTION_DRINKS}`} className={`${getOptionClass(OPTION_DRINKS)} p-1 foodType cursor-pointer`} onClick={() => setCurrentOption(OPTION_DRINKS)}>{OPTION_DRINKS}</a>
                 </ul>
-                <button onClick={shareClick} className='icon-share2 w-12 h-12 right-0 absolute'></button>
+                { showShareButton && <button onClick={shareClick} className='icon-share2 w-12 h-12 right-0 absolute'></button> }
             </div>
             <div className='max-h-92vh lg:px-64 foodOptionContainer flex-1 flex flex-col px-8'>
                 { foodOptions }
