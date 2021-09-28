@@ -46,11 +46,25 @@ const FoodList = (props) => {
             </div>
         )
     }), [onRestaurantClick]);
+    
+    const showShareButton = navigator.share;
+
+    const shareClick = () => {
+        if (navigator.share) {
+            navigator.share({
+              title: 'https://saastrmap.com/',
+              text: 'SaaStr Annual 2021 Interactive Map by Recapped.io.',
+              url: 'https://saastrmap.com/',
+            })
+              .then(() => console.log('Successful share'))
+              .catch((error) => console.log('Error sharing', error));
+        }
+    }
 
     return (
         <div className={`${ !shouldShow && 'hidden'} overflow-y-scroll`}>
-            <div className='sticky top-0 bg-white'>
-                <div className='max-h-92vh lg:px-64'>
+            <div className='sticky top-0'>
+                <div className='max-h-92vh lg:px-64 bg-white'>
                     <RecappedBanner />
                 </div>
                 <ul className='w-full bg-blue-50 px-8 lg:px-64 pt-2 pb-1 flex justify-between'>
@@ -58,6 +72,7 @@ const FoodList = (props) => {
                     <a href={`#${OPTION_DINNER}`} className={`${getOptionClass(OPTION_DINNER)} p-1 foodType cursor-pointer`} onClick={() => setCurrentOption(OPTION_DINNER)}>{OPTION_DINNER}</a>
                     <a href={`#${OPTION_DRINKS}`} className={`${getOptionClass(OPTION_DRINKS)} p-1 foodType cursor-pointer`} onClick={() => setCurrentOption(OPTION_DRINKS)}>{OPTION_DRINKS}</a>
                 </ul>
+                { showShareButton && <button onClick={shareClick} className='icon-share2 w-12 h-12 right-0 absolute'></button> }
             </div>
             <div className='max-h-92vh lg:px-64 foodOptionContainer flex-1 flex flex-col px-8'>
                 { foodOptions }
