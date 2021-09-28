@@ -49,14 +49,16 @@ const FoodList = (props) => {
 
     return (
         <div className={`${ !shouldShow && 'hidden'} overflow-y-scroll`}>
-            <div className='max-h-92vh lg:px-64 sticky-top-0'>
-                <RecappedBanner />
+            <div className='sticky top-0 bg-white'>
+                <div className='max-h-92vh lg:px-64'>
+                    <RecappedBanner />
+                </div>
+                <ul className='w-full bg-blue-50 px-8 lg:px-64 pt-2 pb-1 flex justify-between'>
+                    <a href={`#${OPTION_LUNCH}`} className={`${getOptionClass(OPTION_LUNCH)} p-1 foodType cursor-pointer`} onClick={() => setCurrentOption(OPTION_LUNCH)}>{OPTION_LUNCH}</a>
+                    <a href={`#${OPTION_DINNER}`} className={`${getOptionClass(OPTION_DINNER)} p-1 foodType cursor-pointer`} onClick={() => setCurrentOption(OPTION_DINNER)}>{OPTION_DINNER}</a>
+                    <a href={`#${OPTION_DRINKS}`} className={`${getOptionClass(OPTION_DRINKS)} p-1 foodType cursor-pointer`} onClick={() => setCurrentOption(OPTION_DRINKS)}>{OPTION_DRINKS}</a>
+                </ul>
             </div>
-            <ul className='w-full bg-blue-50 px-8 lg:px-64 pt-2 pb-1 flex justify-between sticky top-0'>
-                <a href={`#${OPTION_LUNCH}`} className={`${getOptionClass(OPTION_LUNCH)} p-1 foodType cursor-pointer`} onClick={() => setCurrentOption(OPTION_LUNCH)}>{OPTION_LUNCH}</a>
-                <a href={`#${OPTION_DINNER}`} className={`${getOptionClass(OPTION_DINNER)} p-1 foodType cursor-pointer`} onClick={() => setCurrentOption(OPTION_DINNER)}>{OPTION_DINNER}</a>
-                <a href={`#${OPTION_DRINKS}`} className={`${getOptionClass(OPTION_DRINKS)} p-1 foodType cursor-pointer`} onClick={() => setCurrentOption(OPTION_DRINKS)}>{OPTION_DRINKS}</a>
-            </ul>
             <div className='max-h-92vh lg:px-64 foodOptionContainer flex-1 flex flex-col px-8'>
                 { foodOptions }
             </div>
